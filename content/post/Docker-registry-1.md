@@ -1,10 +1,9 @@
 ---
 title: "Docker 搭建私有仓库（一）"
-subtitle: 非安全仓库的搭建方法
+subtitle: Docker 非安全私有仓库搭建方法
 date: 2023-04-06
 draft: false
 tags: ["Docker", "registry"]
-categories: ["Docker"]
 ---
 
 一般我们构建Docker image 的时候，是从Docker 官方维护的镜像仓库Docker Hub上拉取的镜像。DockerHub 相当于Docker世界的Github, 上面有非常丰富的镜像资源。当然，你也可以在DockerHub上注册帐号，将自己的镜像存储在DockHub上。不过，如果自己或企业开发的程序，并没有开源的打算，只会自己内部使用，那就需要搭建自己的私有仓库，存放这些私有镜像。
@@ -158,3 +157,7 @@ Status: Downloaded newer image for 192.168.56.101:5000/nginx:alpine
 ```
 
 此时拉取成功。这样局域网内的非安全仓库就搭建完毕了。其实也可以用该方法在公网服务器上搭建非安全的仓库，采用http协议进行镜像的拉取和推送。事实上网上也有不少blog文章，教授的是在公网上进行非安全的registry搭建，但我极其不建议这么做。如果仓库建立在公网上，那么最好还是做好安全措施，搭建采用带TLS的registry仓库，下一篇我会介绍怎样搭建安全的registry仓库。
+
+
+
+[Click](/post/docker-registry-2/)
